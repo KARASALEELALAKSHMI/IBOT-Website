@@ -737,6 +737,70 @@
 }
 /*** Feature End ***/
 
+/*** Gallery ***/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close, .prev, .next {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.close {
+    top: 10px;
+    right: 20px;
+}
+
+.prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 /*** Appointment Start ***/
 .appointment {
