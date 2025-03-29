@@ -27,20 +27,21 @@
 
 
     // Hero Header carousel
-    $(".header-carousel").owlCarousel({
-        animateOut: 'slideOutDown',
-        items: 1,
-        autoplay: true,
-        smartSpeed: 1000,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-    });
-
+$(".header-carousel").owlCarousel({
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 4000,  // Adjust time interval for slower effect
+    smartSpeed: 1500,       // Slower sliding speed
+    dots: false,
+    loop: true,
+    nav: true,
+    navText: [
+        '<i class="bi bi-arrow-left"></i>',
+        '<i class="bi bi-arrow-right"></i>'
+    ],
+    animateOut: 'fadeOut',  // Remove vertical slide effect
+    animateIn: 'slideInRight' 
+});
 
     // International carousel
     $(".testimonial-carousel").owlCarousel({
@@ -56,25 +57,26 @@
             '<i class="bi bi-arrow-right"></i>'
         ]
     });
-
-
-    // Modal Video
-    $(document).ready(function () {
-        var $videoSrc;
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
-        });
-        console.log($videoSrc);
-
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
+// Modal Video
+$(document).ready(function () {
+    var $videoSrc;
+    $('.btn-play').click(function () {
+        $videoSrc = $(this).data("src");
     });
 
+    $('#videoModal').on('shown.bs.modal', function (e) {
+        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+    });
+
+    $('#videoModal').on('hide.bs.modal', function (e) {
+        $("#video").attr('src', $videoSrc);
+    });
+
+    // Lightbox Initialization (ADD THIS)
+    if ($.fn.lightbox) {
+        $('.lightbox').lightbox();
+    }
+});
 
     // testimonial carousel
     $(".testimonial-carousel").owlCarousel({
