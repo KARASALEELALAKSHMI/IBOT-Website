@@ -549,6 +549,34 @@
 }
 /*** Single Page Hero Header End ***/
 
+.clients-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .clients-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  
+  .clients-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .clients-logos img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .clients-logos img:hover {
+    transform: scale(1.1);
+  }
 
 /*** Service Start ***/
 .service .service-item {
