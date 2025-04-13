@@ -493,6 +493,20 @@
 }
 /*** Single Page Hero Header End ***/
 
+/*** Single Page Hero3 Header Start ***/
+.bg-breadcrumb-ISO {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/ISO-Certification-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0 60px 0;
+}
+
+.bg-breadcrumb-ISO .breadcrumb-item a {
+    color: var(--bs-white) !important;
+}
+/*** Single Page Hero Header End ***/
+
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb-SA {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/sa.jpg);
